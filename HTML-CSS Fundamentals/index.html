@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--Asta spune browserului ca foloseste HTML-->
+<html lang="en">
+  <!--atribut care specifica limba site-ului-->
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+    <!--meta = date despre date-->
+    <!--charset = specifica setul de caractere folosite pentru scrierea site-ului-->
+    <title>Limbajul de baza al internetului: HTML</title>
+    <!--Asa se pune titlul pagini (numele din Tab)-->
+
+    <!--
+    <style>
+      h1 {
+        color: blue;
+      }
+    </style>
+    <!- -element de CSS cu ajutorul <style></style>- ->-->
+  </head>
+  <!--Pt lucruri invizibile in fereastra de browser (titlu,link spre fisiere CSS, etc.)-->
+<div class="container">
+  <body>
+    <!--
+    <h1>H1 Limbajul de baza al internetului: HTML</h1>
+    <!- -Titlu mare de pe pagina web- ->
+    <!- -Primary heading- ->
+    <h2>H2 Limbajul de baza al internetului: HTML</h2>
+    <!- -Secondary heading s.a.m.d- ->
+    <h3>H3 Limbajul de baza al internetului: HTML</h3>
+    <h4>H4 Limbajul de baza al internetului: HTML</h4>
+    <h5>H5 Limbajul de baza al internetului: HTML</h5>
+    <h6>H6 Limbajul de baza al internetului: HTML</h6>
+  -->
+    <!--Iara ceva cod tampit ca mi se pare misto faza asta cu codul "in aer" :))-->
+    <header class="main-header">
+      <h1>
+        <!--style="color: blue" in <h1> ar fi INLINE CSS, dar nu e prea indicat sa folosim CSS astfel-->
+        📘 The Code Magazine Kecskes Cristian Laurentiu
+      </h1>
+
+      <nav>
+        <!-- <strong>Navigation:</strong> -->
+        <a href="blog.html">Blog</a>
+        <!--Trimitere spre o pagina interna a site-ului-->
+        <a href="#">Challenges</a>
+        <a href="#">Flexbox</a>
+        <a href="#">CSS Grid</a>
+      </nav>
+      <!--invisible box which contains these instructions-->
+      <!--aici puteam scrie si <div></div>, dar asta nu este un element din HTML5-->
+    </header>
+    <!--top part of the document-->
+
+    <article>
+      <header class="post-header">
+        <h2>The Basic Language of the Web: HTML</h2>
+
+        <img
+          src="laura-jones.jpg"
+          alt="Laura Jones poza"
+          width="50"
+          height="50"
+        />
+
+        <p id="author" class="mihai">
+          Posted by <b>Laura Jones</b> on Monday, June 21st 2027
+          <strong>Kesckes Cristian Laurentiu</strong>
+        </p>
+        <!--b este o varianta fara semnificatie pt scris BOLD, strong e varianta mai buna cu semnificatie, dar fac acelasi lucru-->
+
+        <img
+          src="img/post-img.jpg"
+          alt="HTML code on the screen"
+          width="500"
+          height="200"
+          class="post-image"
+        />
+        <!--imagine cu sursa post-img.jpg-->
+        <!--src sursa imaginii-->
+        <!--alt text alternativ folosit de motorul de cautare pentru a identifica imaginea, nu modifica imaginea doar in cazul in care aceasta nu poate fi gasita (textul din alt se pune in locul imaginii)-->
+        <!--width/height = latime/inaltime imagine-->
+        <!--asa punem poza din alt director-->
+      </header>
+      <p>
+        All modern websites and web applications are built using three
+        fundamental technologies: HTML, CSS and JavaScript. These are the
+        languages of the web.
+      </p>
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all about,
+        and why you too should learn it.
+      </p>
+
+      <h3>What is <i>HTML</i>?</h3>
+      <!--modalitatea veche de a scrie text italic-->
+      <p>
+        <em>HTML</em> stands for <strong>H</strong>yper<strong>T</strong>ext
+        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+        language that web developers use to structure and describe the content
+        of a webpage (not a programming language).
+      </p>
+      <!--in paragraful asta am exemplu de scris italic in varianta noua-->
+      <p>
+        HTML consists of elements that describe different types of content:
+        paragraphs, links, headings, images, video, etc. Web browsers understand
+        HTML and render HTML code as websites.
+      </p>
+      <p>In HTML, each element is made up of 3 parts:</p>
+      <ol>
+        <li class="first-li">The opening tag</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+        <!--list ltems-->
+      </ol>
+      <!--Lista ordonata NUMBERED LIST-->
+
+      <p>
+        Poti sa inveti mai multe despre F1 aici
+        <a href="https://www.youtube.com/watch?v=52khlKOl1do">F1 baby</a>
+      </p>
+      <p>
+        You can learn more about HTML from here
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN HTML</a>
+      </p>
+      <!--Exemple de Hyperlink intr-un paragraf-->
+      <!--href = atribut care defineste link-ul catre care vom fi trimisi-->
+      <!--Ambele exemple sunt website-uri externe-->
+      <h3>Why should you learn HTML?</h3>
+      <p>
+        There are countless reasons for learning the fundamental language of the
+        web. Here are 5 of them:
+      </p>
+      <ul>
+        <li class="first-li">
+          To be able to use the fundamental web dev language
+        </li>
+        <li>
+          To hand-craft beautiful websites instead of relying on tools like
+          Worpress or Wix
+        </li>
+        <li>To build web applications</li>
+        <li>To impress friends</li>
+        <li>To have fun 😃</li>
+        <!--list items-->
+      </ul>
+      <!--Lista neordonata BULLET POINTS-->
+
+      <p>Hopefully you learned something new here. See you next time!</p>
+
+      <!--Poti sa lasi pana si text gol in fisierul HTML si il ia ca si cod valid pe
+      care browserul il randeaza LOL-->
+      <!--<a href="#">Hai sus, Deluta de Marii!</a>-->
+      <!--atributul href impreuna cu caracterul # te trimite sus pe pagina curenta-->
+    </article>
+    <!--insemneaza faptul ca este un articol, obiect etc.-->
+    <!--pastram alte notatii, adica nav, article, header din motive semantice "Semantic HTML"-->
+
+    <aside>
+      <h4>Related posts</h4>
+      <ul class="related">
+        <li>
+          <img src="img/related-1.jpg" alt="related 1" width="50" height="50" />
+          <a href="#">How to Learn Web Development</a>
+          <p class="related-author">By Kecskes Cristian Laurentiu</p>
+        </li>
+        <li>
+          <img src="img/related-2.jpg" alt="related 2" width="50" height="50" />
+          <a href="#">The Unknown Power of CSS</a>
+          <p class="related-author">By Jim Dillon</p>
+        </li>
+        <li>
+          <img src="img/related-3.jpg" alt="related 3" width="50" height="50" />
+          <a href="#">Why JavaScript is Awsome</a>
+          <p class="related-author">By Matilda</p>
+        </li>
+      </ul>
+    </aside>
+
+    <footer>
+      <p id="copyright" class="copyright text">
+        Copyright &copy; 2055 by Kecskes Cristian Laurentiu
+      </p>
+    </footer>
+    <!--pt textul lipit jos cu copyright and others-->
+    <!--%copy; si altele sunt HTML Entity-->
+  </div>
+  <button>💗Like</button>
+  <!--WINDOWS+. = open emoji picker-->
+  <!--CTRL+WINDOWS+SPACE = change language on your PC-->
+  </body>
+  <!--corpul site-ului-->
+</html>
+<!--elementul de HTML-->

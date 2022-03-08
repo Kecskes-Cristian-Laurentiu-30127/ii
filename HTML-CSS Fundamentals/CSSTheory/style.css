@@ -1,0 +1,17 @@
+.author {
+  font-style: italic;
+  font-size: 50px;
+}
+
+#author-text {
+  font-size: 100px;
+}
+
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+  font-size: 30px;
+}
+/*CONFLICTING DECLARATION*/
+/*toate se aplica pe element, dar avem conflict la font-size*/

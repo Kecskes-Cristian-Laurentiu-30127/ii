@@ -1,0 +1,384 @@
+/*
+* {
+  border-top: 10px solid #1098ad;
+}*/
+/*selector universal (le ia pe toate si are cea mai mica prioritate)*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+/*rescriem valorile default pentru margin si padding pt toata pagina*/
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  /*majoritatea atributelor legate de text sunt mostenite (inharitance) de catre copii lui body*/
+  border-top: 10px solid #1098ad;
+  /*border-top nu este mostenit, ar fi foarte impracticabil*/
+  position: relative;
+}
+
+.container {
+  width: 1000px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin: 0 auto;
+}
+
+/*
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font
+  color: #444;
+  acelasi lucru ca si #444444 
+}
+*/
+/*selectie multipla*/
+
+.main-header {
+  background-color: #f7f7f7;
+  /*culoare in backround-ul header-ului*/
+  /* padding: 20px; */
+  /*padding in jurul CONTENT de 20px*/
+  /* padding-left: 40px; */
+  /* padding-right: 40px; */
+  /*padding la stanga si la dreapta lui CONTENT de 40px*/
+
+  padding: 20px 40px;
+  /*short-hand top-botoom=20px left-right=40px*/
+  margin-bottom: 60px;
+  /* height: 80px; */
+  /*impunem inaltimea elementului*/
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+nav a:link {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  /*border: 5px solid #1098ad;*/
+  /*face un cadran solid de 5px cu de culoare blue*/
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /*face acelasi cadran dar cu margini sus si jos (uita-te la prima linie comentata mai sus de secventa asta)*/
+  /*border-left: 5px solid #1098ad;*/
+  /*border-right: 5px solid #1098ad;*/
+  /*astea pentru cadran stanga si dreapta*/
+  /* padding-top: 50px; */
+  /* padding-bottom: 50px; */
+  padding: 50px 0;
+  width: 500px;
+  /*impunem latimea elementului*/
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+  /*un ton de albastru scris in hexa, red=10 green=98 blue=ad*/
+  /*daca tii mouse-ul pe codul de culoare va aparea color picker-ul*/
+}
+
+h1 {
+  color: blue;
+  /*culoarea textului*/
+  font-size: 26 px;
+  /*marimea textului*/
+
+  text-transform: uppercase;
+  /*modifica diferte caract. ale textului*/
+  font-style: italic;
+  /*modifica stilul in care este scris textul*/
+}
+/*selectie simpla*/
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  /*spatiul intre linii este marimea_fontului*line-height*/
+  margin-bottom: 15px;
+  /* display: inline; */
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* display: inline; */
+}
+
+li:last-child {
+  margin-bottom: 0;
+  /*cand folosim 0 nu trebuie sa specificam unitatea de masura (px in cazul de fata)*/
+}
+
+/* footer p {
+  font-size: 15px;
+} */
+/*descendent selector*/
+/*selecteaz toate <p></p> din <footer></footer>*/
+
+/*
+article header p {
+  font-style: italic;
+}
+*/
+/*nested descendent selector*/
+/*selecteaz toate <p></p> din <header></header> care se afla la randul lui intr-un <footer></footer>*/
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+/**referinta la structurile cu id="author"*/
+
+#copyright {
+  font-size: 15px;
+}
+/**referinta la structurile cu id="copyright"*/
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+  /*face textul bold*/
+}
+/**referinta la structurile cu class="related-author"*/
+
+.related {
+  list-style: none;
+}
+/**referinta la structurile cu class="related"*/
+
+/* body {
+  background-color: #cacaca;
+} */
+
+/*.first-li {
+  font-weight: bold;
+}*/
+
+li:first-child {
+  font-weight: bold;
+}
+/*PSEUDO-CLASS, selectam doar primul element din toate <li></li>*/
+
+li:last-child {
+  font-style: italic;
+}
+/* selectam doar ultimul element din toate <li></li>*/
+
+/* li:nth-child(2) {
+   color: red; 
+}*/
+/* selectam doar al n-lea element (in cazul nostru al 2-lea) din toate <li></li>*/
+
+/* li:nth-child(3) {
+   color: blueviolet; 
+} */
+
+/*li:nth-child(odd) {
+  color: #1010ff;
+}*/
+
+/*
+
+article p:first-child {
+  color: red;
+}*/
+/*select 1st child of the article, NOT select a p that is the 1st child of the article, ciudat*/
+
+/* article p:last-child {
+  color: red;
+} */
+
+/* a {
+  color: red;
+} */
+/*se refera la toate <a></a> simple, asta nu e cea mai buna varianta*/
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+  /*scabam de stilizarea hyperlinkului, in cazul de fata il folosim sa scapam de subliniere*/
+}
+/*se refera la toate <a></a> cu href="ceva-link" (cu hyperlink)*/
+
+a:visited {
+  /*color:#777*/
+  color: #1098ad;
+}
+/*culoarea pe care o capata hyperlink-ul cand acesta este vizitat de utilizator*/
+
+/*varianta scurtata la ultimele 2 de sus*/
+a:link,
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline solid orangered;
+}
+/*ce se intampla cand tii mouse-ul pe hyperlink*/
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+/*ce se intampla cand dai click pe hyperlink*/
+/*LVMA*/
+
+a {
+  color: red;
+}
+/*asta nu are niciun efect pt ca avem prioritate mai mare pe pseudo-class mai sus a:... */
+
+/*
+.mihai {
+  color: rgba(0, 0, 255, 0.1);
+}*/
+
+/*toate 4 elemente sunt legate de footer*/
+#copyright {
+  color: rgb(4, 0, 255);
+}
+/*asta va fi aplicat, are cea mai mare prioritate, restul 3 de mai jos nu vor fi folosite*/
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+/*daca nu aveam #copyright se aplica .text pt ca este urmatorul cel mai mare in lista de prioritati, si ultimul dintre cele cu aceeasi prioritate*/
+
+footer p {
+  color: green /*!important*/;
+  /*daca decomentam !important textul va fi green, cel mai mare in lista de prioritati*/
+}
+/*acesta este ultimul in lista de prioritati, s-ar aplica doar daca restul nu ar exista*/
+
+.post-image {
+  width: 100%;
+  /*100% din parent container*/
+  height: auto;
+}
+
+nav a:link {
+  /* background-color: orangered; */
+  /* margin: 20px; */
+  /*!FARA display: block; --> creeaza doar spatiu pe orizontala pentru ca este un element de tip inline*/
+  /* padding: 20px; */
+  /*!FARA display: block; --> locul acoperit de acest element este mai mare, dar ancora nu se schimba (elementul ramane in acelasi loc, fapt care poate duce la suprapunerea elementelor din pagina)*/
+  /* display: block; */
+  /*acum elementele sunt de tip block, ceea ce schimba comportamentul*/
+
+  margin-right: 30px;
+  margin-top: 10px;
+  display: inline-block;
+  /*am facut elementul de tip inline-block*/
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 22px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  /*OUT-OF-Flow positioning*/
+  /* top: 50px;
+  left: 50px; */
+
+  bottom: 10px;
+  right: 20px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+/*PSEUDO-ELEMENT*/
+
+/* h2::first-letter {
+  font-size: 70px;
+} */
+
+h3 + p::first-line {
+  /* color: red; */
+}
+/*ADJACENT-SIBLING*/
+
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "TOP";
+  color: #444;
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+/*asta a devenit ultimul copil a lui h2 (h2:last-child)*/
+/*element creat in CSS, nu e nicaieri in HTML*/
+
+/* h2::before {
+  content: "TOP";
+  color: #444;
+  background-color: #ffe70e;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+} */
+/*asta a devenit ultimul copil a lui h2 (h2:first-child)*/
+/*element creat in CSS, nu e nicaieri in HTML*/
