@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--Asta spune browserului ca foloseste HTML-->
+<!--generat cu !-->
 <html lang="en">
   <!--atribut care specifica limba site-ului-->
   <head>
@@ -33,10 +34,10 @@
     <h6>H6 Limbajul de baza al internetului: HTML</h6>
   -->
     <!--Iara ceva cod tampit ca mi se pare misto faza asta cu codul "in aer" :))-->
-    <header class="main-header">
+    <header class="main-header clearfix">
       <h1>
         <!--style="color: blue" in <h1> ar fi INLINE CSS, dar nu e prea indicat sa folosim CSS astfel-->
-        📘 The Code Magazine Kecskes Cristian Laurentiu
+        📘 The Code Magazine <!--Kecskes Cristian Laurentiu-->
       </h1>
 
       <nav>
@@ -44,11 +45,13 @@
         <a href="blog.html">Blog</a>
         <!--Trimitere spre o pagina interna a site-ului-->
         <a href="#">Challenges</a>
-        <a href="#">Flexbox</a>
-        <a href="#">CSS Grid</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="css-grid.html">CSS Grid</a>
       </nav>
       <!--invisible box which contains these instructions-->
       <!--aici puteam scrie si <div></div>, dar asta nu este un element din HTML5-->
+    
+    <!-- <div class="clear"></div> -->
     </header>
     <!--top part of the document-->
 
@@ -57,15 +60,18 @@
         <h2>The Basic Language of the Web: HTML</h2>
 
         <img
+        class="author-img"
           src="laura-jones.jpg"
           alt="Laura Jones poza"
           width="50"
           height="50"
         />
 
-        <p id="author" class="mihai">
+        <p id="author" class="author">
           Posted by <b>Laura Jones</b> on Monday, June 21st 2027
           <strong>Kesckes Cristian Laurentiu</strong>
+          <!--Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi impedit est tenetur omnis reprehenderit repellat quod deserunt quisquam labore perferendis magni natus alias, adipisci dignissimos corrupti accusamus a repellendus hic?-->
+        <!--generat cu lorem-->
         </p>
         <!--b este o varianta fara semnificatie pt scris BOLD, strong e varianta mai buna cu semnificatie, dar fac acelasi lucru-->
 

@@ -7,6 +7,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /*face ca height/width sa contina si padding-ul*/
 }
 /*rescriem valorile default pentru margin si padding pt toata pagina*/
 
@@ -20,7 +22,7 @@ body {
 }
 
 .container {
-  width: 1000px;
+  width: 1200px;
   /* margin-left: auto; */
   /* margin-right: auto; */
   margin: 0 auto;
@@ -60,12 +62,12 @@ li {
   margin-bottom: 40px;
 }
 
-nav a:link {
+nav a {
   font-size: 18px;
 }
 
 article {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 aside {
@@ -80,8 +82,8 @@ aside {
   /*astea pentru cadran stanga si dreapta*/
   /* padding-top: 50px; */
   /* padding-bottom: 50px; */
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
+  /* width: 500px; */
   /*impunem latimea elementului*/
 }
 
@@ -182,6 +184,8 @@ article header p {
 
 .related {
   list-style: none;
+  margin-left: 0;
+  /*overwrite margin*/
 }
 /**referinta la structurile cu class="related"*/
 
@@ -347,6 +351,7 @@ h1::first-letter {
 h3 + p::first-line {
   /* color: red; */
 }
+
 /*ADJACENT-SIBLING*/
 
 h2 {
@@ -382,3 +387,57 @@ h2::after {
 } */
 /*asta a devenit ultimul copil a lui h2 (h2:first-child)*/
 /*element creat in CSS, nu e nicaieri in HTML*/
+
+/*FLOATS*/
+.author-img {
+  float: left;
+  /*FLOATING ELEMENT, scos din "flow-ul paginii, dar tot poate crea margin in jurul sau"*/
+}
+
+.author {
+  /* padding-left: 80px; */
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+/*COLLAPSING ELEMENT */
+/*introducand FLOAT are un efect similar cu scoaterea elementelor din elementul parinte (in cazul asta <header> se comporta ca si cum nu ar avea <h1> si <nav> in el)*/
+
+clear {
+  clear: both;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/*CLEAR FIX HACK*/
+
+article {
+  /* background-color: green; */
+  width: 825px;
+  float: left;
+}
+/*muta elementul <article> in stanga*/
+
+aside {
+  /* background-color: red; */
+  width: 300px;
+  float: right;
+}
+/*muta elementul <article> in dreapta*/
+
+footer {
+  /* background-color: yellow; */
+  clear: both;
+}
+/*article,aside,footer=SIMPLE FLOAT LAYOUT*/
