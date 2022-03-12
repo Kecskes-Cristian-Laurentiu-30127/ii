@@ -36,23 +36,91 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 30px;
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: 250px 150px; */
+        /* creeaza 2 coloane in layout (prima lata de 250px, a 2-a lata de 150px) */
+        /*de asemenea se creeaza si cate linii sunt necesare pentru a contine toate elementele*/
+        /* grid-template-columns: 200px 200px 1fr 100px; */
+        /* grid-template-columns: 200px 200px 1fr 1fr; */
+        /*1fr=one fraction, fill all the available emplty space, va face elementul sa isi ajusteze marimea in functie de comportamentul site-ului in loc sa aiba o marime fixata in px, cele 2 cu fr isi impart spatiul ramas intre ele cu scopul de al umple*/
+        /* grid-template-columns: 2fr 1fr 1fr auto; */
+        /* all columns the same size and adjustable (exceptie primul care e x2), fr e ca un fel de autoscale cu ratio */
+        /*auto face in cazul acesta ca al 4-lea element sa ocupe spatiul ramas */
+        grid-template-columns: repeat(
+          4,
+          1fr
+        ); /*<=> grid-template-columns: 1fr 1fr 1fr 1fr;*/
+        /*scrierea scurtata*/
+        /*implicit rows <=> explicit rows*/
+        /* grid-template-rows: 300px 200px; */
+        /*creeaza 2 linii*/
+        /* gap: 30px; */
+        /*introduce spatiu vertical si orizontal intre elemente*/
+
+        grid-template-rows: 1fr 1fr;
+        /*folosim fr pentru linii, exact ca la coloane cu exceptia ca aici trebuie sa specificam o inaltime (daca nu, o ia pe cea default)*/
+        /* height: 500px; */
+        /*specificam o inaltime pentru grid-tamplate-rows*/
+        column-gap: 20px;
+        row-gap: 40px;
+        display: none;
+      }
+
+      .el--8 {
+        grid-column: 2/3;
+        /*muta item-ul pe coloana care incepe la linia 2 si se termina la linia 3 din GRID LINES*/
+        grid-row: 1/2;
+        /*muta item-ul pe linia care incepe la linia 1 si se termina la linia 2 din GRID LINES*/
+      }
+
+      .el--2 {
+        grid-column: 1 / span 4; /*<=> grid-column: 1/5; <- ii spunem sa ocupe 3 coloane*/
+        grid-column: 1/-1;
+        /*-1 folosim cand vrem sa ocupe tot randul pe care se afla, nu mai trebuie sa tinem cont cate coloane are GRID-ul nostru*/
+        grid-row: 2;
+      }
+
+      .el--6 {
+        /* grid-row: 3/5; */
       }
 
       .container--2 {
+        /* display: none; */
+        /* face ca elementul sa dispara de tot (si din layout) */
+
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
         margin: 100px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 50px;
+
+        /*Aligning tracks inside container: distribute empty space*/
+        justify-content: center;
+        /* justify-content: space-between; */
+        align-content: center;
+
+        /*Aligning items inside cells: moving items around inside cells*/
+        align-items: center;
+        justify-items: center;
+      }
+
+      .el--3 {
+        align-self: end;
+        justify-self: end;
+        /*-self = overwrite la proprietatile stabilite de container pt toate*/
       }
     </style>
   </head>
@@ -64,7 +132,7 @@
       <div class="el el--4">(4) are</div>
       <div class="el el--5">(5) amazing</div>
       <div class="el el--6">(6) languages</div>
-      <div class="el el--7">(7) to</div>
+      <!-- <div class="el el--7">(7) to</div> -->
       <div class="el el--8">(8) learn</div>
     </div>
 
